@@ -135,14 +135,14 @@ function App() {
         <div className="form-popup">
           <div className="form-content">
             <h2>Interested in Investing</h2>
-            <select>
+            <select className="form-input">
               <option>Individual</option>
               <option>Organization</option>
             </select>
-            <input type="text" placeholder="Name / Organization Name" />
-            <input type="email" placeholder="Email" />
-            <input type="tel" placeholder="Phone Number" />
-            <button>Submit</button>
+            <input type="text" className="form-input" placeholder="Name / Organization Name" />
+            <input type="email" className="form-input" placeholder="Email" />
+            <input type="tel" className="form-input" placeholder="Phone Number" />
+            <button className="submit-button">Submit</button>
             <button onClick={handleCloseForm} className="close-button">Close</button>
           </div>
         </div>
