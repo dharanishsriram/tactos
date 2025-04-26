@@ -1,110 +1,178 @@
-/* Reset some default styles */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+.container {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  color: #001f3f;
+  min-height: 100vh;
+  padding-bottom: 50px;
 }
 
-/* Layout styling */
-.app {
+.banner {
+  height: 250px;
   display: flex;
-  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #ccc;
 }
 
-/* Sidebar */
-.sidebar {
-  width: 80px;
-  background-color: #0f172a;
-  padding-top: 20px;
+.banner h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.reasons {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  background-color: #f8f8f8;
+}
+
+.reason-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 200px;
+}
+
+.icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.filters {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.filter-controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.filter-controls select, .filter-controls button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-controls button {
+  background-color: #001f3f;
+  color: white;
+  cursor: pointer;
+}
+
+.startup-list {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
-.sidebar button {
-  background: none;
+.startup-card {
+  border: 1px solid #ccc;
+  width: 60%;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.startup-logo {
+  font-size: 40px;
+}
+
+.startup-card h3 {
+  margin: 0;
+}
+
+.startup-card p {
+  margin: 5px 0;
+  color: gray;
+}
+
+.startup-detail {
+  margin: 50px auto;
+  width: 80%;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.startup-video {
+  width: 100%;
+  height: 400px;
+}
+
+.startup-info {
+  margin-top: 20px;
+}
+
+.startup-description {
+  margin-top: 20px;
+}
+
+.startup-actions {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.startup-actions button {
+  padding: 10px 20px;
+  background-color: #001f3f;
   color: white;
   border: none;
-  padding: 10px;
-  margin: 10px 0;
+  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
-  font-size: 20px;
 }
 
-.sidebar button:hover {
-  background-color: #1e293b;
-  border-radius: 10px;
+.share-buttons button {
+  margin-left: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
-/* Main Content */
-.main {
-  flex: 1;
-  padding: 40px;
-  background-color: #fff;
-  border-radius: 20px;
-  margin: 20px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow-y: auto;
+.form-popup {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-h1 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #0f172a;
-}
-
-h2 {
-  margin-bottom: 20px;
-}
-
-/* Form styling */
-.form {
+.form-content {
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  width: 300px;
 }
 
-.form input,
-.form textarea,
-.form select {
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
-  font-size: 16px;
+.form-content input, .form-content select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-.form input[type="file"] {
-  padding: 6px;
-  border: none;
+.close-button {
+  background-color: red;
 }
-
-textarea {
-  resize: vertical;
-  min-height: 80px;
-}
-
-/* Buttons */
-.form button {
-  padding: 12px;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  color: white;
+.share-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
   cursor: pointer;
-  transition: 0.3s;
-}
-
-.form button[type="button"] {
-  background-color: #0ea5e9; /* Blue for Edit */
-}
-
-.form button[type="submit"] {
-  background-color: #10b981; /* Green for Update */
-}
-
-.form button:hover {
-  opacity: 0.9;
 }
